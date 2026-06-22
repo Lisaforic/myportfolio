@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result & GPA Calculator</title>
+    <link rel="stylesheet" href="resultcalc.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Student Result System</h1>
+
+    <!-- SINGLE SCORE SECTION -->
+    <h3>Grade Checker</h3>
+
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="number" id="score" placeholder="Enter Score (0 - 100)">
+    <button onclick="calculateSingle()">Check Grade</button>
+
+    <div id="singleResult"></div>
+
+    <hr>
+
+    <!-- GPA SECTION -->
+    <h3>GPA Calculator</h3>
+
+    <input type="text" id="course" placeholder="Course Name">
+    <input type="number" id="unit" placeholder="Course Unit (e.g 3)">
+    <input type="number" id="courseScore" placeholder="Course Score">
+
+    <button onclick="addCourse()">Add Course</button>
+
+    <button onclick="calculateGPA()">Calculate GPA</button>
+
+    <button onclick="downloadPDF()">Download GPA Report (PDF)</button>
+
+    <div id="courseList"></div>
+    <div id="gpaResult"></div>
+
+</div>
+
+<script src="resultcalc.js"></script>
+
+</body>
+</html>
